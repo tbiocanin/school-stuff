@@ -21,6 +21,7 @@ type
     Edit4: TEdit;
     Edit5: TEdit;
     Edit6: TEdit;
+    Edit7: TEdit;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -50,13 +51,14 @@ begin
 udaljenost_tacaka := sqrt(sqr(x2-x1) + sqr(y2-y1)); //formula from analitic geometry
 end;
 
-function povrsina(a, b, c) : real;
-var s;
+function povrsina(a, b, c: real) : real;
+var s, _povrsina : real;
 begin
-
+     s := (a+b+c)/2;
+     _povrsina := sqrt(s*(s-a)*(s-b)*(s-c));
 end;
 procedure TForm1.Button1Click(Sender: TObject);
-var xA, xB, yA, yB, xC, yC: integer; var AB, AC, BC : real;
+var xA, xB, yA, yB, xC, yC: integer; var AB, AC, BC, povrsina_ : real;
 begin
      xA := StrToINt(Edit1.Text);
      yA := StrToINt(Edit2.Text);
@@ -68,9 +70,13 @@ begin
      AB := rastojanje(xA, yA, xB, yB);//function call with the parameters
      AC := rastojanje(xA, yA, xC, yC);
      BC := rastojanje(xB, yB, xC, yC);
+
+     povrsina_ := povrsina(AB,AC,BC);
+
      showMessage(FloatToStr(AB));
      showMEssage(FloatToStr(AC));
      showMessage(FloatToStr(BC));
+     Edit7.Text := FloatToStr(povrsina_);
 end;
 
 end.
