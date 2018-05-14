@@ -20,14 +20,14 @@
         <ComponentName Value="Form1"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="65"/>
-        <CursorPos X="14" Y="80"/>
+        <TopLine Value="143"/>
+        <CursorPos X="38" Y="150"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
     </Units>
-    <JumpHistory Count="17" HistoryIndex="16">
+    <JumpHistory Count="24" HistoryIndex="23">
       <Position1>
         <Filename Value="functions.pas"/>
       </Position1>
@@ -95,6 +95,34 @@
         <Filename Value="functions.pas"/>
         <Caret Line="78" Column="68" TopLine="64"/>
       </Position17>
+      <Position18>
+        <Filename Value="functions.pas"/>
+        <Caret Line="86" Column="25" TopLine="76"/>
+      </Position18>
+      <Position19>
+        <Filename Value="functions.pas"/>
+        <Caret Line="88" Column="25" TopLine="78"/>
+      </Position19>
+      <Position20>
+        <Filename Value="functions.pas"/>
+        <Caret Line="122" Column="34" TopLine="98"/>
+      </Position20>
+      <Position21>
+        <Filename Value="functions.pas"/>
+        <Caret Line="124" Column="34" TopLine="100"/>
+      </Position21>
+      <Position22>
+        <Filename Value="functions.pas"/>
+        <Caret Line="144" Column="33" TopLine="115"/>
+      </Position22>
+      <Position23>
+        <Filename Value="functions.pas"/>
+        <Caret Line="143" Column="24" TopLine="121"/>
+      </Position23>
+      <Position24>
+        <Filename Value="functions.pas"/>
+        <Caret Line="145" Column="24" TopLine="123"/>
+      </Position24>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
