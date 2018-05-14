@@ -15,11 +15,13 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Button4: TButton;
     Edit1: TEdit;
     Edit2: TEdit;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -98,6 +100,26 @@ begin
      minmax(input1, input2, output1, output2);
 
      showMessage('minimum je ' + inttostr(output1) + ' maks je ' + inttostr(output2));
+end;
+
+procedure poredak(unos : integer; var novi_br : integer);
+var c: integer;
+begin
+  novi_br := 0;
+  while unos <> 0 do
+        begin
+          c := unos mod 10;
+          novi_br  := novi_br*10 + c;
+          unos := unos div 10;
+        end;
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+var unos, novi_broj : integer;
+begin
+   unos := StrToInt(Edit1.Text);
+   poredak(unos, novi_broj);
+   showMessage(IntToStr(novi_broj));
 end;
 
 
