@@ -20,14 +20,14 @@
         <ComponentName Value="Form1"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="48"/>
-        <CursorPos X="3" Y="73"/>
+        <TopLine Value="65"/>
+        <CursorPos X="14" Y="80"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
     </Units>
-    <JumpHistory Count="13" HistoryIndex="12">
+    <JumpHistory Count="17" HistoryIndex="16">
       <Position1>
         <Filename Value="functions.pas"/>
       </Position1>
@@ -77,8 +77,24 @@
       </Position12>
       <Position13>
         <Filename Value="functions.pas"/>
-        <Caret Line="73" Column="5" TopLine="48"/>
+        <Caret Line="73" Column="3" TopLine="48"/>
       </Position13>
+      <Position14>
+        <Filename Value="functions.pas"/>
+        <Caret Line="75" Column="3" TopLine="50"/>
+      </Position14>
+      <Position15>
+        <Filename Value="functions.pas"/>
+        <Caret Line="93" Column="48" TopLine="68"/>
+      </Position15>
+      <Position16>
+        <Filename Value="functions.pas"/>
+        <Caret Line="100" Column="87" TopLine="71"/>
+      </Position16>
+      <Position17>
+        <Filename Value="functions.pas"/>
+        <Caret Line="78" Column="68" TopLine="64"/>
+      </Position17>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

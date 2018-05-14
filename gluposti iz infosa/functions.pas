@@ -14,10 +14,12 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Button2: TButton;
+    Button3: TButton;
     Edit1: TEdit;
     Edit2: TEdit;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -71,6 +73,31 @@ begin
   input := StrToInt(Edit1.TExt);
   even_numbers := par(input);
   showMessage(IntToStr(even_numbers));
+end;
+
+procedure minmax(input1, input2 : integer; var min, max : integer);
+begin
+     if input1 > input2 then
+      begin
+        min := input2;
+        max := input1;
+      end;
+     if input1 < input2 then
+      begin
+        min := input1;
+        max := input2;
+      end;
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+var input1, input2, output1, output2 : integer;
+begin
+     input1 := StrToInt(Edit1.Text);
+     input2 := StrToInt(Edit2.Text);
+
+     minmax(input1, input2, output1, output2);
+
+     showMessage('minimum je ' + inttostr(output1) + ' maks je ' + inttostr(output2));
 end;
 
 
