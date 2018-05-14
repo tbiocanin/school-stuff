@@ -120,6 +120,7 @@ object Form1: TForm1
     Top = 208
     Width = 75
     Caption = 'Povrsina'
+    OnClick = Button2Click
     TabOrder = 7
   end
   object Button3: TButton
@@ -128,6 +129,7 @@ object Form1: TForm1
     Top = 88
     Width = 75
     Caption = 'Obim'
+    OnClick = Button3Click
     TabOrder = 8
   end
   object Edit7: TEdit

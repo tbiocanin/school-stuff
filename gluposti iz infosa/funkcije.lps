@@ -20,14 +20,14 @@
         <ComponentName Value="Form1"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="54"/>
-        <CursorPos X="32" Y="54"/>
+        <TopLine Value="99"/>
+        <CursorPos X="36" Y="125"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
     </Units>
-    <JumpHistory Count="17" HistoryIndex="16">
+    <JumpHistory Count="20" HistoryIndex="19">
       <Position1>
         <Filename Value="analiticka_geometrija.pas"/>
       </Position1>
@@ -95,6 +95,18 @@
         <Filename Value="analiticka_geometrija.pas"/>
         <Caret Line="58" Column="7" TopLine="40"/>
       </Position17>
+      <Position18>
+        <Filename Value="analiticka_geometrija.pas"/>
+        <Caret Line="74" Column="22" TopLine="55"/>
+      </Position18>
+      <Position19>
+        <Filename Value="analiticka_geometrija.pas"/>
+        <Caret Line="105" Column="20" TopLine="76"/>
+      </Position19>
+      <Position20>
+        <Filename Value="analiticka_geometrija.pas"/>
+        <Caret Line="124" Column="36" TopLine="98"/>
+      </Position20>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

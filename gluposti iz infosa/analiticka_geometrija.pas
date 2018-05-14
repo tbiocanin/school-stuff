@@ -22,6 +22,7 @@ type
     Edit5: TEdit;
     Edit6: TEdit;
     Edit7: TEdit;
+    Edit8: TEdit;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -30,6 +31,8 @@ type
     Label6: TLabel;
     Label7: TLabel;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -57,6 +60,13 @@ begin
      s := (a+b+c)/2;
      _povrsina := sqrt(s*(s-a)*(s-b)*(s-c));
 end;
+
+function obim(a,b,c : real) : real;
+var sum: real;
+begin
+     sum := a+b+c;
+end;
+
 procedure TForm1.Button1Click(Sender: TObject);
 var xA, xB, yA, yB, xC, yC: integer; var AB, AC, BC, povrsina_ : real;
 begin
@@ -71,12 +81,48 @@ begin
      AC := rastojanje(xA, yA, xC, yC);
      BC := rastojanje(xB, yB, xC, yC);
 
-     povrsina_ := povrsina(AB,AC,BC);
+
 
      showMessage(FloatToStr(AB));
      showMEssage(FloatToStr(AC));
      showMessage(FloatToStr(BC));
+
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+var xA, xB, yA, yB, xC, yC: integer; var AB, AC, BC, povrsina_ : real;
+begin
+     xA := StrToINt(Edit1.Text);
+     yA := StrToINt(Edit2.Text);
+     xB := StrToINt(Edit3.Text);
+     yB := StrToINt(Edit4.Text);
+     xC := StrToINT(Edit5.Text);
+     yC := StrToInt(Edit6.Text);
+
+     AB := rastojanje(xA, yA, xB, yB);//function call with the parameters
+     AC := rastojanje(xA, yA, xC, yC);
+     BC := rastojanje(xB, yB, xC, yC);
+
+     povrsina_ := povrsina(AB,AC,BC);
      Edit7.Text := FloatToStr(povrsina_);
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+var xA, xB, yA, yB, xC, yC: integer; var AB, AC, BC, obim_ : real;
+begin
+     xA := StrToINt(Edit1.Text);
+     yA := StrToINt(Edit2.Text);
+     xB := StrToINt(Edit3.Text);
+     yB := StrToINt(Edit4.Text);
+     xC := StrToINT(Edit5.Text);
+     yC := StrToInt(Edit6.Text);
+
+     AB := rastojanje(xA, yA, xB, yB);//function call with the parameters
+     AC := rastojanje(xA, yA, xC, yC);
+     BC := rastojanje(xB, yB, xC, yC);
+
+     obim_ := obim(AB, AC, BC);
+     Edit8.Text := FloatToStr(obim_);
 end;
 
 end.
