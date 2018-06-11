@@ -16,13 +16,20 @@ type
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
+    Button5: TButton;
+    Button6: TButton;
+    Button7: TButton;
     Edit1: TEdit;
+    Edit2: TEdit;
     ListBox1: TListBox;
     ListBox2: TListBox;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
+    procedure Button7Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -108,6 +115,60 @@ begin
      end;
   showMessage(IntToStr(sp));
   showMessage(IntToStr(sn));
+end;
+
+procedure TForm1.Button5Click(Sender: TObject);
+var n, i, _sum, input, max_value : integer;
+var avg : real;
+var x : array[1..200] of integer;
+begin
+ n := StrToInt(Edit1.Text);
+
+ _sum := 0;
+ max_value := 0;
+ for i := 1 to n do
+     begin
+       input := StrToInt(InputBox('unesi clanove niza', 'x[' + intToStr(i) + ']=', ''));
+       //maksimalna vrednost niza
+       if input > max_value then max_value := input;
+       //////////////////////////
+       listBox1.Items.Add('x[' + intToStr(i) + ']=' + IntToStr(input));
+       _sum := _sum + input;
+     end;
+ avg := _sum / n;
+ showMessage(FloatTostr(avg));
+ showMessage(IntToStr(max_value));
+end;
+
+procedure TForm1.Button6Click(Sender: TObject);
+var n, i, counter, input : integer;
+var x : array[1..8] of integer;
+begin
+//n := StrToInt(Edit1.Text);
+counter := 0;
+
+for i := 1 to 8 do
+    begin
+      input := strToInt(InputBox('unesi clanove niza', 'x[' + intToStr(i) + ']=', ''));
+      listBox1.Items.Add('x[' + intToStr(i) + ']=' + IntToStr(input));
+      if input > 9 then
+         if input < 100 then counter := counter + 1;
+    end;
+edit2.Text := intToStr(counter);
+end;
+
+procedure TForm1.Button7Click(Sender: TObject);
+var n, i, neparni_clanovi, input : integer;
+var x : array[1..100] of integer;
+begin
+n := StrToInt(Edit1.Text);
+
+for i := 1 to n do
+    begin
+         input := strToInt(inputbox('unesi clanove niza', 'x[' + intToStr(i) + ']=', ''));
+         ListBox1.Items.Add(IntToStr(input));
+         if input mod 2 <> 0 then ListBox2.Items.Add(intTostr(input));
+    end;
 end;
 
 end.
