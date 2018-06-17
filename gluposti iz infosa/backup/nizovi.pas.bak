@@ -167,7 +167,7 @@ for i := 1 to n do
     begin
          input := strToInt(inputbox('unesi clanove niza', 'x[' + intToStr(i) + ']=', ''));
          ListBox1.Items.Add(IntToStr(input));
-         if i mod 2 <> 0 then ListBox2.Items.Add(intTostr(input));
+         if input mod 2 <> 0 then ListBox2.Items.Add(intTostr(input));
     end;
 end;
 

@@ -44,7 +44,7 @@ implementation
 {$R *.lfm}
 
 { TForm1 }
-
+ //prikazivanje brojeva cije su prva i poslednja cifra ista (fixed)
 procedure TForm1.Button1Click(Sender: TObject);
 var n, i, first_digit, last_digit, input, number : integer;
 var x : array[1..50] of integer;
@@ -67,7 +67,8 @@ begin
         if first_digit = last_digit then ListBox1.Items.Add(IntToStr(number));
       end;
 end;
-
+///////////////////////////////////////////////////////////
+ //niz od n slucajno generisanih clanova i prikazivanje clanova na parnim indexima
 procedure TForm1.Button2Click(Sender: TObject);
 var n, i : integer;
 var x : array[1..100] of integer;
@@ -80,7 +81,8 @@ for i := 1 to n do
       if i mod 2 <> 0 then listBox1.Items.Add('x[' + intToStr(i) + ']=' + IntToStr(x[i]));
     end;
 end;
-
+///////////////////////////////////////////////////////////
+//100 slucajno generisanih brojeva i racunanje njihove usme
 procedure TForm1.Button3Click(Sender: TObject);
 var n, i, s : integer;
 var x : array[1..50] of integer;
@@ -90,13 +92,14 @@ begin
 
   for i := 1 to n do
       begin
-        x[i] := random(100)-n;
+        x[i] := random(100);
         listBox1.Items.Add('x[' + intToStr(i) + ']=' + IntToStr(x[i]));
         s := s + x[i];
       end;
   showMessage(IntToStr(s));
 end;
-
+//////////////////////////////////////////////////////////
+//niz od slucajno generisanih 200 clanova od -100 do 99 i racunanje sume parnih i neparnih br
 procedure TForm1.Button4Click(Sender: TObject);
 var n, i, sp, sn : integer;
 var x : array[1..200] of integer;
@@ -116,7 +119,8 @@ begin
   showMessage(IntToStr(sp));
   showMessage(IntToStr(sn));
 end;
-
+////////////////////////////////////////////////////////
+//niz (n clanova) u kom se trazi srednja vrenost clanova
 procedure TForm1.Button5Click(Sender: TObject);
 var n, i, _sum, input, max_value : integer;
 var avg : real;
@@ -129,7 +133,8 @@ begin
  for i := 1 to n do
      begin
        input := StrToInt(InputBox('unesi clanove niza', 'x[' + intToStr(i) + ']=', ''));
-       //maksimalna vrednost niza
+       //maksimalna vrednost niza (neki drugi zad samo ubacen ovde da ne bih radio
+       //dva puta isto
        if input > max_value then max_value := input;
        //////////////////////////
        listBox1.Items.Add('x[' + intToStr(i) + ']=' + IntToStr(input));
@@ -139,12 +144,12 @@ begin
  showMessage(FloatTostr(avg));
  showMessage(IntToStr(max_value));
 end;
-
+////////////////////////////////////////////////////////////
+//niz od 8 clanova iz kog se prebrojavaju dvocifreni brojevi
 procedure TForm1.Button6Click(Sender: TObject);
 var n, i, counter, input : integer;
 var x : array[1..8] of integer;
 begin
-//n := StrToInt(Edit1.Text);
 counter := 0;
 
 for i := 1 to 8 do
@@ -156,7 +161,9 @@ for i := 1 to 8 do
     end;
 edit2.Text := intToStr(counter);
 end;
-
+//////////////////////////////////////////////////////////
+//niz od n clanova iz kog se u listbox-u ucitavaju samo neparni brojevi, a u drugom listboxu
+//svi clanovi
 procedure TForm1.Button7Click(Sender: TObject);
 var n, i, neparni_clanovi, input : integer;
 var x : array[1..100] of integer;
