@@ -19,6 +19,7 @@ type
     Button5: TButton;
     Button6: TButton;
     Button7: TButton;
+    Button8: TButton;
     Edit1: TEdit;
     Edit2: TEdit;
     ListBox1: TListBox;
@@ -30,6 +31,7 @@ type
     procedure Button5Click(Sender: TObject);
     procedure Button6Click(Sender: TObject);
     procedure Button7Click(Sender: TObject);
+    procedure Button8Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -176,6 +178,16 @@ for i := 1 to n do
          ListBox1.Items.Add(IntToStr(input));
          if input mod 2 <> 0 then ListBox2.Items.Add(intTostr(input));
     end;
+end;
+
+procedure TForm1.Button8Click(Sender: TObject);
+var x : array[1..10] of integer;
+var i : integer;
+begin
+ for i := 1 to 10 do
+     begin
+         ListBox1.Items.Add(intToStr(random(100)+50));
+     end;
 end;
 
 end.
