@@ -1,0 +1,39 @@
+h1 {
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+table {
+  margin: auto;
+}
+
+td {
+  height: 300px;
+  width: 200px;
+  border: 6px solid white; /* ovo me je udupe jebalo; note to self:
+  hoces da rasclanis content (celije u ovo slucaju samo) white solid border */
+}
+
+#firstBorder {
+  background-color: #52489C;
+
+}
+
+#secondBorder {
+  background-color: #4062BB;
+
+}
+
+#thirdBorder {
+  background-color: #59C3C3;
+
+}
+
+#fourthBorder {
+  background-color: #EBEBEB;
+}
+
+#fifthBorder {
+  background-color: #F45B69;
+
+}
