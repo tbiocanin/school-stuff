@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Start-up log in page</title>
     <link rel="stylesheet" href="landingSite.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   </head>
   <body>
     <h1>Welcome to the Landing Page</h1>
@@ -16,14 +17,18 @@
 
     <h2>Sing up for our upcoming launch!</h2>
 
-    <div class="creditatials">
-      <label for="userName">First Name: </label>
-      <input id="userName" type="text" name="" value="" placeholder = "First name" required> <br>
+    <form action="thankYou.html">
+      <label for="userName">First Name: </label> <br>
+      <input id="userName" type="text" name="" value="" required> <br>
 
-      <label for="lastName">Last Name: </label>
-      <input id="lastName" type="text" name="" value="" placeholder = "Last name" required> <br>
+      <label for="lastName">Last Name: </label> <br>
+      <input id="lastName" type="text" name="" value="" required> <br>
 
-      <input id = "subButton" type="submit" name="" value="Submit">
-    </div>
+      <label for="mail">Email: </label> <br>
+      <input id = "mail" type="text" name="" value="" required> <br>
+
+      <!-- <a href="thankYou.html"><input id = "subButton" type="submit" name="" value="Sign me up!"></a> -->
+      <input id = "subButton" type="submit" value="Sign me up!">
+    </form>
   </body>
 </html>

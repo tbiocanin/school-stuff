@@ -1,0 +1,18 @@
+body {
+  background-color: #0e2150;
+  color: white;
+
+  border-left: 70px solid #43bcff;
+  border-right: 70px solid #43bcff;
+  border-bottom: 70px solid #43bcff;
+
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
