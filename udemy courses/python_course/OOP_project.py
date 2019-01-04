@@ -3,7 +3,7 @@
 #####################################
 
 # For this project you will be using OOP to create a card game. This card game will
-# be the card game "War" for two players, you an the computer. If you don't know
+# be the card game "War" for two players, you and the computer. If you don't know
 # how to play "War" here are the basic rules:
 #
 # The deck is divided evenly, with each player receiving 26 cards, dealt one at a time,
@@ -39,7 +39,20 @@ class Deck:
     the players. It will use SUITE and RANKS to create the deck. It should also
     have a method for splitting/cutting the deck in half and Shuffling the deck.
     """
-    pass
+
+    def __init__(self):
+        print("CARD INITIALISATION.")
+        self.all_cards = [(s, r) for s in SUITE for r in RANKS]
+
+    def shuffle_cards(self):
+        print("SHUFFLING THE DECK.")
+        return shuffle(self.all_cards)
+
+    def split_cards(self):
+        print("SPLITTING THE DECK IN HALF.")
+        return self.all_cards[:26], self.all_cards[26:]
+
+    #pass
 
 class Hand:
     '''
@@ -60,5 +73,10 @@ class Player:
 #### GAME PLAY #######
 ######################
 print("Welcome to War, let's begin...")
-
+d = Deck()
+d.shuffle_cards()
+half1, half2 = d.split_cards()
+print(half1)
+print(" ")
+print(half2)
 # Use the 3 classes along with some logic to play a game of war!
