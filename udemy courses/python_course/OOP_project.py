@@ -90,9 +90,12 @@ class Player:
 
     def remove_war_cards(self):
         war_cards = []
-        for x in range(3):
-            war_cards.append(self.hand.cards.pop())
-        return war_cards
+        if len(self.hand.cards) < 3:
+            return self.hand.cards
+        else:
+            for x in range(3):
+                war_cards.append(self.hand.cards.pop())
+            return war_cards
 
     def still_has_cards(self):
         """
@@ -115,7 +118,7 @@ half1, half2 = d.split_cards()
 #create both players
 comp = Player("computer", Hand(half1))
 
-name = input("What is your name?")
+name = input("What is your name? ")
 user = Player(name, Hand(half2))
 
 total_rounds = 0
@@ -157,3 +160,5 @@ while user.still_has_cards() and comp.still_has_cards():
 
 print("game over, number of rounds: " + str(total_rounds))
 print("a war happened " + str(war_count)+ " times")
+print("Computer has: " + str(len(comp.still_has_cards())))
+print(user + " still has cards" + str(len(user.still_has_cards())))
