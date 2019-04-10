@@ -19,5 +19,8 @@ from NewsPage import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index, name="index")
+    # url(r'^', include('NewsPage.urls', namespace='NewsPage'))
+    url(r'^novosti/', views.info_Page, name="info_Page"),
+    url(r'^naslovna/', views.first_Page, name="first_Page"),
+    url(r'^sekcije/', views.sections, name="sections")
 ]
