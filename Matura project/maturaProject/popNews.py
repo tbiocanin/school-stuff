@@ -28,5 +28,5 @@ def populate(N=5):
                                           text=fake_text)[0]
 if __name__ == '__main__':
     print("POPULATING THE DATABASES...PLEASE WAIT")
-    populate(10)
+    populate(20)
     print("Populating Complete!")

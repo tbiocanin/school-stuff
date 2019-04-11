@@ -4,4 +4,4 @@ from django.db import models
 class News(models.Model):
     news_heading = models.CharField(max_length=10)
     date = models.CharField(max_length=128)
-    text = models.CharField(max_length=10000)
+    text = models.CharField(max_length=10000000)
