@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url, include
 from NewsPage import views
+from Sections import views as sc_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^info_Page.html/', views.info_Page, name="info_Page"),
     url(r'^$', views.first_Page, name="first_Page"),
-    url(r'^sekcije/', views.sections, name="sections")
+    url(r'^sekcije/', sc_views.sections, name="sections")
 ]
