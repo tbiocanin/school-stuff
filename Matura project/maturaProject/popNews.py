@@ -18,14 +18,17 @@ topics = ['Razmene', 'Takmicejna ucenika', 'Posete osnovnim skolama', 'Obavesten
 
 def populate(N=5):
 
+    #generise rendom tekst i datume
     for entry in range(N):
         fake_title = fakegen.text()
         fake_date = fakegen.date()
         fake_text = fakegen.text()
 
+        #generisane podatke trpa u bazicu c:
         news = News.objects.get_or_create(news_heading=fake_title,
                                           date=fake_date,
                                           text=fake_text)[0]
+#inicijalizacija
 if __name__ == '__main__':
     print("POPULATING THE DATABASES...PLEASE WAIT")
     populate(20)

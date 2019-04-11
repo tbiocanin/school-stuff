@@ -9,13 +9,13 @@
 
     <nav class="navbar navbar-default navbar-inverse navbar-expand-lg">
         <div class="navbar-header">
-          <a href = "first_Page.html" class="navbar-brand"> Trinaesta beogradska gimnazija</a>
+          <a href = "{% url "first_Page" %}" class="navbar-brand"> Trinaesta beogradska gimnazija</a>
         </div>
 
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a href="info_Page.html" class="nav-link">Novosti <span class="sr-only"> </a>
+              <a href="{% url "info_Page" %}" class="nav-link">Novosti <span class="sr-only"> </a>
             </li>
             <li class="nav-item active">
               <a href="#" class="nav-link">Udzbenici </a>
