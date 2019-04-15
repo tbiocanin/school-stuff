@@ -75,7 +75,8 @@
                 <h5 class="card-title">{{articles.news_heading}}</h5>
                 <h6 class="card-title">Datum objave: {{articles.date}}</h6>
                 <p class="card-text">{{articles.text}}</p>
-                <a href="#" class="btn btn-primary">Procitaj vise</a>
+                <a href="{% url "news" %}" class="btn btn-primary">Procitaj vise</a>
+                  <!-- {% url "news" %} -->
               </div>
             </div>
           </div>

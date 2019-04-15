@@ -9,7 +9,7 @@
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse navbar-expand-lg">
       <div class="container">
         <div class="navbar-header">
-          <a href = "first_Page.html" class="navbar-brand"> Trinaesta beogradska gimnazija</a>
+          <a href = "{% url "first_Page" %}" class="navbar-brand"> Trinaesta beogradska gimnazija</a>
         </div>
 
         <div class="collapse navbar-collapse">
@@ -56,7 +56,17 @@
         </nav>
       </div>
 
+      <!-- {% if News %} -->
+      <!-- {% for articles in News %} -->
+      <div class="container">
+        <h1>{{News}}</h1>
+        <br>
+        <!-- <h3>{{articles.date}}</h3>
 
+        <p>{{articles.text}}</p> -->
+      </div>
+      <!-- {% endfor %} -->
+      <!-- {% endif %} -->
 
 
         <!-- {% if news %}

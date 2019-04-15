@@ -20,10 +20,11 @@ from Sections import views as sc_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^Vesti/', include('NewsPage.urls')),
+    #url(r'^Vesti/', include('NewsPage.urls')),
     #url(r'^Vesti/', views.info_Page, name="info_Page"),
     url(r'^$', views.first_Page, name="first_Page"),
     url(r'^Sekcije/', sc_views.sections, name="sections"),
-    #url(r'^$', views.info_Page, name="info_Page"),
+    url(r'^Vesti', views.info_Page, name="info_Page"),
+    url(r'^Procitaj vise', views.news, name="news"),
 
 ]
