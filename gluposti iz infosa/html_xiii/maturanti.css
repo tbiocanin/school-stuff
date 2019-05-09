@@ -1,0 +1,32 @@
+body {
+  background-color: #466060;
+  color: #F8c7cc;
+  border: 50px solid #0E0F19;
+  font-size: 25px;
+  border-top: 0px;
+  margin: 0px;
+  padding: 5px;
+}
+
+header {
+  margin-bottom: 300px;
+}
+
+h1 {
+  text-align: center;
+  border-bottom: 10px;
+}
+
+#borat_par {
+  width: 50%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#lefty { float: left;}
+#righty {float: right;}
+
+#borat_pic {
+  margin: 50px;
+  width: 25%;
+}
