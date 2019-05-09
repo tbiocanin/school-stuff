@@ -1,0 +1,35 @@
+body {
+  background-color: #F55D3E;
+  border: #878E88 solid 20px;
+  margin: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+  font-style: italic;
+  font-family: sans-serif;
+  color: #F7CB15;
+}
+
+h1 {
+  text-align: center;
+}
+
+p, ul {
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: center;
+  list-style-position: inside;
+
+}
+
+a {
+  color: #F7CB15;
+}
+
+
+
+table {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  border: solid;
+}
